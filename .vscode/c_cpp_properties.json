@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "default",
+            "includePath": [
+                "${workspaceFolder}/arch/**",
+                "${workspaceFolder}/os/**",
+                "${workspaceFolder}/examples/**"
+            ],
+            "defines": [
+                "PROJECT_CONF_BROKER_IP_ADDR",
+                "PROJECT_CONF_STATUS_LED",
+                "NATIVE_TEMPERATURE"
+            ],
+            "compilerPath": "/usr/local/bin/g++",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++11"
+        }
+    ],
+    "version": 4
+}
