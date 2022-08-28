@@ -58,7 +58,12 @@ else
   LDFLAGS += -shared -Wl,-zdefs -Wl,-Map=$(MAPFILE)
 endif
 
-LD = $(CC)
+ifdef LD_OVERRIDE
+  LD = $(LD_OVERRIDE)
+else
+  LD = $(CC)
+endif
+
 # All .csc files contain calls to make with targets that are not the ones
 # Cooja need. Just disable the final copy so Cooja can share the build
 # system with the rest of Contiki-NG.
